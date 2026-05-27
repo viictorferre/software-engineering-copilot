@@ -1,7 +1,5 @@
 # PulseBoard Survey App
 
-GitHub repository: https://github.com/viictorferre/software-engineering-copilot
-
 PulseBoard is a small survey application built for the Software Engineering Copilot activity. I chose the **Survey App** specification from `UserStories_App_d'Enquestes-ENG.pdf`.
 
 ## Submission
