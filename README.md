@@ -8,7 +8,7 @@ PulseBoard is a small survey application built for the Software Engineering Copi
 
 - **Code inside the GitHub repository:** the application source code is included in this repository (`index.html`, `src/`, and `tests/`).
 - **README with used prompts:** see the [Used Prompts](#used-prompts) section.
-- **README with screen shots of the result:** see the [Screenshots](#screenshots) section.
+- **README with screen shots of the result:** see the [Screenshots Of The Result](#screenshots-of-the-result) section.
 - **README with lessons learned on the use of Copilot:** see the [Lessons Learned On The Use Of Copilot](#lessons-learned-on-the-use-of-copilot) section.
 
 ## Selected Functional Requirements
@@ -63,11 +63,11 @@ These are the prompts used progressively with GitHub Copilot while refining the 
 5. "Add anonymous response mode. Do not collect name, email, or any personal identifier. Require all questions to be answered before saving."
 6. "Add a statistics view with counts and percentages for each answer option, using visual bars."
 7. "Add undo support for create, edit, duplicate, and submit response actions. Show a confirmation message after each saved action."
-8. "Improve the interface so all workflows are available from the main screen, responsive on mobile, and visually clear for screenshots."
+8. "Improve the interface so all workflows are available from the main screen and visually clear for screenshots."
 9. "Add unit tests for creation, duplication, anonymous responses, statistics, updating, and persistence."
 10. "Write the README with the GitHub link, prompts used, screenshots, and lessons learned."
 
-## Screenshots
+## Screenshots Of The Result
 
 ### Anonymous Response View
 
@@ -84,10 +84,6 @@ These are the prompts used progressively with GitHub Copilot while refining the 
 ### Created Survey Results
 
 ![Created survey results](docs/screenshots/refined-results.png)
-
-### Mobile View
-
-![Mobile responsive view](docs/screenshots/mobile.png)
 
 ## Lessons Learned On The Use Of Copilot
 
