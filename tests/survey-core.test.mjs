@@ -97,3 +97,63 @@ test("persists surveys using the provided storage adapter", () => {
 
   assert.equal(loadSurveys(adapter)[0].title, "Course pulse");
 });
+
+test("rejects invalid survey drafts with appropriate error messages", () => {
+  const factory = idFactory();
+
+  // Missing title
+  assert.throws(
+    () =>
+      createSurveyFromDraft(
+        {
+          title: "",
+          description: "No title",
+          questions: [{ text: "Question?", options: ["Yes", "No"] }],
+        },
+        factory,
+      ),
+    (err) => err.message.includes("Add a survey title."),
+  );
+
+  // No questions
+  assert.throws(
+    () =>
+      createSurveyFromDraft(
+        {
+          title: "Survey",
+          description: "No questions",
+          questions: [],
+        },
+        factory,
+      ),
+    (err) => err.message.includes("Add at least one question."),
+  );
+
+  // Question without text
+  assert.throws(
+    () =>
+      createSurveyFromDraft(
+        {
+          title: "Survey",
+          description: "Bad question",
+          questions: [{ text: "", options: ["Yes", "No"] }],
+        },
+        factory,
+      ),
+    (err) => err.message.includes("Question 1 needs text."),
+  );
+
+  // Question with insufficient options
+  assert.throws(
+    () =>
+      createSurveyFromDraft(
+        {
+          title: "Survey",
+          description: "Only one option",
+          questions: [{ text: "Question?", options: ["Yes"] }],
+        },
+        factory,
+      ),
+    (err) => err.message.includes("at least two options"),
+  );
+});

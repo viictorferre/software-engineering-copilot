@@ -84,9 +84,9 @@ These are the prompts used progressively with Copilot/AI assistance while refini
 
 ## Lessons Learned On The Use Of Copilot
 
-- Copilot works better when the prompt includes the exact user stories and acceptance criteria instead of a vague app idea.
-- Iterative prompts are more effective than asking for the whole project in one step.
-- Asking for one feature at a time made the commits easier to understand and review.
-- Copilot can generate useful structure quickly, but the developer still has to verify edge cases such as missing answers, duplicated IDs, and persistence.
-- Clear acceptance criteria make it easier to ask Copilot for tests that match the expected behavior.
-- Visual verification is still necessary because generated code can be functionally correct but have layout or usability issues.
+- **Specificity improves output quality**: Copilot generates significantly better code when prompts include exact user stories and acceptance criteria rather than vague descriptions. This reduces the need for corrections and clarifications.
+- **Iterative development beats monolithic requests**: Breaking development into smaller, focused prompts yields better results than requesting the entire project at once. This approach also improves code organization and makes reviewing changes easier.
+- **Feature-by-feature implementation aids maintainability**: Implementing one feature at a time results in cleaner commit history and easier debugging. It's easier to trace which feature introduced a bug when features are isolated.
+- **Edge cases require developer verification**: While Copilot excels at generating boilerplate and common patterns quickly, developers must manually verify edge cases—empty inputs, ID uniqueness, data persistence, constraint violations—that automated code generation may overlook.
+- **Test-driven validation accelerates development**: Clear acceptance criteria make it straightforward to request comprehensive tests that validate expected behavior. Good tests catch both functional errors and edge cases early.
+- **Visual and UX verification is irreplaceable**: Generated code may be logically correct but have poor layout, responsive design issues, or usability problems. Manual testing on different screen sizes and user workflows is essential for production-ready applications.
