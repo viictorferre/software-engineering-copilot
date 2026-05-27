@@ -1,0 +1,11 @@
+{
+  "name": "software-engineering-copilot",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Survey application built for the software engineering Copilot activity.",
+  "scripts": {
+    "start": "python -m http.server 5173",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7f3;
+  --panel: #ffffff;
+  --ink: #1d2527;
+  --muted: #64706b;
+  --line: #dce4dc;
+  --teal: #1e7b73;
+  --coral: #d96648;
+  --amber: #d89b2b;
+  --mint: #d9eee7;
+  --shadow: 0 18px 40px rgba(35, 44, 41, 0.1);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 32px 0;
+}
+
+.hero-panel {
+  min-height: 280px;
+  display: grid;
+  align-content: end;
+  gap: 12px;
+  padding: 34px;
+  border-radius: 8px;
+  color: #ffffff;
+  background:
+    linear-gradient(120deg, rgba(11, 73, 68, 0.9), rgba(60, 107, 68, 0.72)),
+    linear-gradient(135deg, #164f4a 0%, #4e6d42 55%, #d96648 100%);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4.6rem, 5.2rem);
+  line-height: 0.95;
+}
+
+.lede {
+  max-width: 620px;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    width: min(100% - 20px, 1180px);
+    padding: 16px 0;
+  }
+
+  .hero-panel {
+    min-height: 240px;
+    padding: 24px;
+  }
+}
